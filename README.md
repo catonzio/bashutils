@@ -15,6 +15,7 @@ The `/bash` directory includes the following files:
 - `bash_aliases`: Contains custom aliases for the bash shell.
 - `bash_functions`: Contains custom functions for the bash shell.
 - `git_utils`: A script to help with git commits.
+- `vim/.vimrc`: The configuration file for vim. Copy it in your home folder to enable the configuration.
 
 To install the bash utilities, follow these steps:
 
