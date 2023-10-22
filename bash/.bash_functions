@@ -3,6 +3,12 @@ mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
+
+# Function to cd into a folder and ls directly
+cl() {
+	cd "$1" && ls
+}
+
 # Function to extract compressed archives (supports .zip, .tar.gz, .tar.bz2, .tar.xz)
 extract() {
     if [ -f "$1" ] ; then
