@@ -30,11 +30,16 @@ editbashrc() {
 
 # Function to quickly edit the '.bash_aliases' file
 editaliases() {
-    vim ~/.bashconfigs/.bash_aliases
+    vim ~/.bashconfigs/bash/.bash_aliases
 }
 
 # Function to quickly edit the '.bash_functions' file
 editfunctions() {
-    vim ~/.bashconfigs/.bash_functions
+    vim ~/.bashconfigs/bash/.bash_functions
 }
+
+code() {
+	(/mnt/c/Users/danil/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe $1 &) &> /dev/null
+}
+
 
