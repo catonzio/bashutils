@@ -32,3 +32,11 @@ This will add the necessary configurations and aliases to your bash shell.
 ## PowerShell and cmd Utilities
 
 The `/powershell` and `/cmd` directories contain utility scripts specific to their respective shells. Please refer to the instructions provided within those directories for installing and using those utilities.
+
+To install the git utility, follow these steps:
+
+1. Open the terminal.
+2. Open the `$PROFILE` file with your favorite editor (e.g. notepad) with the following command: `notepad $PROFILE`.
+3. Copy the content of `powershell/git_utils.ps1` inside the opened editor.
+4. Save, close and restart the terminal.
+5. Type `git-utils` and use the function.
