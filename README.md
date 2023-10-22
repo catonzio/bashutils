@@ -2,6 +2,9 @@
 
 This repository contains utility scripts for various shells, including bash, PowerShell, and cmd.
 
+## Important notes
+- This repository must be placed in the home directory
+
 ## Repository Structure
 
 - `/bash`: Contains utility scripts and configuration files for the bash shell.
