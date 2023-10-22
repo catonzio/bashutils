@@ -1,9 +1,10 @@
-add_file_to_bashrc() {
+add_files_to_bashrc() {
   local search_directory="$1"
   local file_name="$2"
+  local file_paths=()  # Initialize an empty array to collect file paths
 
   if [ -z "$search_directory" ] || [ -z "$file_name" ]; then
-    echo "Usage: add_aliases_to_bashrc <search_directory> <file_name>"
+    echo "Usage: add_files_to_bashrc <search_directory> <file_name>"
     return
   fi
 
@@ -12,14 +13,16 @@ add_file_to_bashrc() {
 
   # Loop through the found files and source them in .bashrc
   for file in $alias_files; do
-	if [ -f $file ]; then
-		echo "sourcing $file"
-		. $file
-	fi
-    # echo ". $file" >> ~/.bashrc
+    if [ -f "$file" ]; then
+      # echo "Sourcing $file"
+      . "$file"
+      file_paths+=("$file")  # Add the file path to the array
+    fi
   done
+
+  # Return the array of file paths
+  echo "${file_paths[@]}"
 }
 
-add_file_to_bashrc "/home/catonz" ".bash_aliases"
-add_file_to_bashrc "/home/catonz" ".bash_functions"
-
+ALIASES_PATH=$(add_files_to_bashrc "/home/catonz" ".bash_aliases")
+FUNCTIONS_PATH=$(add_files_to_bashrc "/home/catonz" ".bash_functions")

@@ -1,17 +1,13 @@
+alias git-utils="$(dirname $ALIASES_PATH)/git_utils.sh"
+
 # Alias to source all the files
-alias source_all="source ~/.bashconfigs/.bash_aliases && source ~/.bashconfigs/.bash_functions && source ~/.bashrc"
+alias source-all="source $(dirname $ALIASES_PATH)/.bash_aliases && source $(dirname $FUNCTIONS_PATH)/.bash_functions && source ~/.bashrc"
 
 # Alias to update and upgrade in one command
 alias update="sudo apt update && sudo apt upgrade -y"
 
 # Alias to open Sublime Text
 alias sublime="/mnt/c/Program\ Files/Sublime\ Text/subl.exe"
-
-# Alias to to ssh into mirroringlands (DEPRECATED)
-# alias mirroringlands="ssh danilo@82.223.102.192"
-
-# Alias to ssh into my site
-#  alias ssh-personalsite="ssh dcatone@94.143.137.114"
 
 # Alias to show a progress bar while copying files
 alias cp='rsync --progress -ah'
