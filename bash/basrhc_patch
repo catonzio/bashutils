@@ -24,5 +24,8 @@ add_files_to_bashrc() {
   echo "${file_paths[@]}"
 }
 
-ALIASES_PATH=$(add_files_to_bashrc "$HOME" ".bash_aliases")
-FUNCTIONS_PATH=$(add_files_to_bashrc "$HOME" ".bash_functions")
+source "$HOME/bashutils/bash/.bash_aliases"
+source "$HOME/bashutils/bash/.bash_functions"
+
+#ALIASES_PATH=$(add_files_to_bashrc "$HOME" ".bash_aliases")
+#FUNCTIONS_PATH=$(add_files_to_bashrc "$HOME" ".bash_functions")

@@ -1,7 +1,11 @@
-alias git-utils="$(dirname $ALIASES_PATH)/git_utils.sh"
+# Set the paths directly in .bash_aliases
+ALIASES_PATH="$HOME/bashutils/bash/.bash_aliases"
+FUNCTIONS_PATH="$HOME/bashutils/bash/.bash_functions"
 
 # Alias to source all the files
-alias source-all="source $(dirname $ALIASES_PATH)/.bash_aliases && source $(dirname $FUNCTIONS_PATH)/.bash_functions && source ~/.bashrc"
+alias source-all="source $ALIASES_PATH && source $FUNCTIONS_PATH && source ~/.bashrc"
+
+alias git-utils="$(dirname $ALIASES_PATH)/git_utils.sh"
 
 # Alias to update and upgrade in one command
 alias update="sudo apt update && sudo apt upgrade -y"
