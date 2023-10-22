@@ -15,6 +15,7 @@ This repository contains utility scripts for various shells, including bash, Pow
 
 The `/bash` directory includes the following files:
 
+- `bash_aliases`: Contains the definition of the paths, sources the aliases and functions and a function to install the configuration.
 - `bash_aliases`: Contains custom aliases for the bash shell.
 - `bash_functions`: Contains custom functions for the bash shell.
 - `git_utils`: A script to help with git commits.
@@ -24,13 +25,20 @@ To install the bash utilities, follow these steps:
 
 1. Open the terminal.
 2. Navigate to the root folder of this repository.
-3. Append the content of `bash/bashrc_patch` to your `~/.bashrc` file using the following command:
+3. Source the main file using the following command:
 
    ```
-   cat bash/bashrc_patch >> ~/.bashrc
+   source bash/bashmain.sh
    ```
-4. Source the `.bashrc` file with the command `source $HOME/.bashrc`.
-5. From now on, you can use the alias `source-all` to source the `.bashrc`, `.bash_aliases` and `.bash_functions` files.
+
+4. Install the configuration with the command
+   
+   ```
+   install-bashutils
+   ```
+
+Note that the installing process writes the sourcing of the main file into the `~/.bashrc` file.
+From now on, you can use the alias `source-all` to source the `.bashrc`, `.bash_aliases` and `.bash_functions` files.
 
 This will add the necessary configurations and aliases to your bash shell.
 
