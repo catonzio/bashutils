@@ -26,6 +26,8 @@ To install the bash utilities, follow these steps:
    ```
    cat bash/bashrc_patch >> ~/.bashrc
    ```
+4. Source the `.bashrc` file with the command `source $HOME/.bashrc`.
+5. From now on, you can use the alias `source-all` to source the `.bashrc`, `.bash_aliases` and `.bash_functions` files.
 
 This will add the necessary configurations and aliases to your bash shell.
 
@@ -36,7 +38,12 @@ The `/powershell` and `/cmd` directories contain utility scripts specific to the
 To install the git utility, follow these steps:
 
 1. Open the terminal.
-2. Open the `$PROFILE` file with your favorite editor (e.g. notepad) with the following command: `notepad $PROFILE`.
+2. Open the `$PROFILE` file with your favorite editor (e.g. notepad) with the following command: 
+
+   ```
+   notepad $PROFILE
+   ```
+
 3. Copy the content of `powershell/git_utils.ps1` inside the opened editor.
 4. Save, close and restart the terminal.
 5. Type `git-utils` and use the function.
