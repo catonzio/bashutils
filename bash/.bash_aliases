@@ -1,6 +1,6 @@
 # Set the paths directly in .bash_aliases
-ALIASES_PATH="$HOME/bashutils/bash/.bash_aliases"
-FUNCTIONS_PATH="$HOME/bashutils/bash/.bash_functions"
+# ALIASES_PATH="$HOME/bashutils/bash/.bash_aliases"
+# FUNCTIONS_PATH="$HOME/bashutils/bash/.bash_functions"
 
 # Alias to source all the files
 alias source-all="source $ALIASES_PATH && source $FUNCTIONS_PATH && source ~/.bashrc"
