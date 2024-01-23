@@ -21,18 +21,21 @@ The `/bash` directory includes the following files:
 - `git_utils`: A script to help with git commits.
 - `vim/.vimrc`: The configuration file for vim. Copy it in your home folder to enable the configuration.
 
+### Installation
+
 To install the bash utilities, follow these steps:
 
 1. Open the terminal.
-2. Navigate to the root folder of this repository.
-3. Source the main file using the following command:
+2. Clone the repository: `git clone https://github.com/catonzio/bashutils`
+3. Navigate to the root folder of this repository: `cd bashutils`
+4. Source the main file using the following command:
 
    ```
    source bash/bashmain.sh
    ```
 
 4. Install the configuration with the command
-   
+
    ```
    install-bashutils
    ```
@@ -45,6 +48,8 @@ This will add the necessary configurations and aliases to your bash shell.
 ## PowerShell and cmd Utilities
 
 The `/powershell` and `/cmd` directories contain utility scripts specific to their respective shells. Please refer to the instructions provided within those directories for installing and using those utilities.
+
+### Installation
 
 To install the git utility, follow these steps:
 

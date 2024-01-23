@@ -16,10 +16,20 @@ source $ALIASES_PATH
 source $FUNCTIONS_PATH
 
 install-bashutils() {
-	content="source $THIS_PATH/bashmain.sh"
-	if ! grep -q "$content" "$HOME/.bashrc"; then
-		echo "Inserting the line '$content' into $HOME/.bashrc"
-  		echo $content >> $HOME/.bashrc
-	fi
-	source $HOME/.bashrc
+    content="source $THIS_PATH/bashmain.sh"
+    if ! grep -q "$content" "$HOME/.bashrc"
+    then
+        echo "Inserting the line '$content' into $HOME/.bashrc"
+        echo $content >> $HOME/.bashrc
+    fi
+    # make tab completion case insensitive
+    if [ ! -a $HOME/.inputrc ]
+    then
+        echo '$include /etc/inputrc' > $HOME/.inputrc
+    fi
+    if ! grep -q "set completion-ignore-case On" $HOME/.inputrc
+    then
+        echo "set completion-ignore-case On" >> $HOME/.inputrc
+    fi
+    source $HOME/.bashrc
 }
